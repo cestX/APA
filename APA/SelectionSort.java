@@ -11,7 +11,7 @@ public class SelectionSort {
 
             //percorre array até o final
             for (int j = aux + 1; j < list.length; j++) {
-                //se o valor do array for  
+                //compara com todos os valores até achar um menor e troca
                 if (list[j] < list[aux]) {
                     aux = j;
                 }
