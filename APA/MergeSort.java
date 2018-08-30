@@ -67,16 +67,18 @@ public class MergeSort {
 
         //enquanto a não chegar ao meio e b não chegar ao final
         while (a <= iMeio && b <= iFinal) {
-            //se o indice 
+            //se o indice  de a for maior que b, insere na nova lista
             if (listaAuxiliar[a] < listaAuxiliar[b]) {
                 lista[c] = listaAuxiliar[a];
                 a++;
             } else {
+                //se for igual ou maior 
                 lista[c] = listaAuxiliar[b];
                 b++;
             }
             c++;
         }
+        
         //junta elementos da esquerda em uma lista so
          while (a <= iMeio) {
             lista[c] = listaAuxiliar[a];
@@ -91,6 +93,5 @@ public class MergeSort {
                  c++;
                 }
     }
-
 
 }

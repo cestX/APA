@@ -6,29 +6,23 @@ public class Lista {
 
     public static void main(String[] args) {
         
-       String localArquivo = "/home/rhenan/NetBeansProjects/APA1/src/APA/APA/Entrada.txt";
+       double time; 
+       String localArquivo = "/home/rhenan/Documentos/APA/APA/Entrada.txt";
 
         int [] lista = lerDados(localArquivo); 
 
-        //System.out.println("\n\nInsertion Sort");
-        //manda lista desordenada
-        //InsertionSort is = new InsertionSort(lista.clone()); 
-        //System.out.println("\n\nSelection Sort");
-         // Manda lista desordenada
-        long time;
-         //SelectionSort ss = new SelectionSort(lista.clone());
-         //System.out.println("Tempo em Milissegundos: " +(System.currentTimeMillis() - time));
-
-        System.out.println("\n\n Merge Sort");
+        System.out.println("\n\n Counting Sort");
         time = System.currentTimeMillis();
-        MergeSort ms = new MergeSort(lista.clone(), 0, lista.length-1);
+        CountingSort ms = new CountingSort(lista.clone());
         System.out.println("Tempo em Milissegundos: " +(System.currentTimeMillis() - time));
+        System.out.println("\n\n\n");
 
 
-        System.out.println("\n\n Quick Sort");
+        //System.out.println("\n\n Heap Sort");
         time = System.currentTimeMillis();
-        QuickSort qs = new QuickSort(); 
-        qs.sort(lista.clone());
+        System.out.println("HeapSort:");
+        HeapSort hs = new HeapSort(); 
+        hs.heapSort(lista.clone());
         System.out.println("Tempo em Milissegundos: " +(System.currentTimeMillis() - time));
 
   
