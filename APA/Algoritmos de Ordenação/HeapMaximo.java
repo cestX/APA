@@ -6,7 +6,7 @@ public class HeapMaximo {
         //Variavel auxiliar 
         int aux;
         
-        //pai é sempre o tamanho do vetor 
+        //pai é sempre o tamanho do vetor no heapMaximo
         int pai = (tam / 2) - 1;
 
         while (pai >= 0) {

@@ -16,12 +16,10 @@ public class HeapSort {
             // chama o heapMaximo e passa o indice de até onde a arvore vai
             heapMaximo.heapMaximo(vetor, tamanho);
 
-            // troca o primeiro termo, que é o maior, com o último.
-            // nessa troca, ele já fica ordenado            
+            // troca o primeiro termo, que é o maior, com o último e diminuirmos o tamanho do array          
             auxiliar = vetor[0];
             vetor[0] = vetor[tamanho - 1];
             vetor[tamanho - 1] = auxiliar;
-
 
             tamanho--;
 

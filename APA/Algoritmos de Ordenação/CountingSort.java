@@ -3,21 +3,21 @@ import java.util.*;
 
 public class CountingSort {
 
-    int[] lista, lista2; 
+    int[] lista, lista2;
 
-    CountingSort (int [] lista) {
+    CountingSort(int[] lista) {
 
-        ordena(lista); 
+        ordena(lista);
 
-        for (int i=0; i<lista2.length-1; i++) {
-        
-            System.out.print(lista2[i] +",");  
+        for (int i = 0; i < lista2.length - 1; i++) {
+
+            System.out.print(lista2[i] + ",");
         }
-       System.out.println(lista2[lista2.length-1]);
+        System.out.println(lista2[lista2.length - 1]);
 
     }
 
-    public  int[] ordena(int[] lista) {
+    public int[] ordena(int[] lista) {
 
         this.lista = lista;
 
@@ -33,7 +33,7 @@ public class CountingSort {
         int tamanhoLista2 = lista.length;
         int pos;
 
-        // inicializando com 0 todo lista auxiliar
+        // inicializando com 0 a tabela de valores 3
         for (int i = 0; i < tamanhoLista3; i++) {
             lista3[i] = 0;
         }
@@ -43,7 +43,7 @@ public class CountingSort {
             lista3[lista[i]]++;
         }
 
-       //soma valor do indice atual (n) com o valor do indice anterior (n-1)
+        // soma valor do indice atual (n) com o valor do indice anterior (n-1)
         for (int i = 1; i < tamanhoLista3; i++) {
             lista3[i] += lista3[i - 1];
         }
@@ -58,9 +58,7 @@ public class CountingSort {
         return lista2;
     }
 
-
-
-    //Percorre a lista procurando o maior valor
+    // Percorre a lista procurando o maior valor
     private int maiorValor() {
         int maiorValor = 0;
         for (int i = 0; i < lista.length; i++) {
