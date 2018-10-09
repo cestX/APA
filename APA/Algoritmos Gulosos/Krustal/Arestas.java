@@ -14,6 +14,8 @@ public class Arestas implements Comparable<Arestas>{
     
     Arestas(){}; 
     
+
+    //ordena as arestas por tamanho 
     @Override
     public int compareTo(Arestas arestas) {
         return this.peso-arestas.peso; 

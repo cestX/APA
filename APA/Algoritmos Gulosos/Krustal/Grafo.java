@@ -53,10 +53,8 @@ public class Grafo {
     
     }
     
-    void KrustalMST() 
-   
+    void KrustalMST()  
     {
-    
         //Guarta o resultado da MST
         Arestas resultado[] = new Arestas[vertice];
         int i = 0; //variável pra percorrer resultado;
